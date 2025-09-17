@@ -1,0 +1,12 @@
+version: '3'
+services:
+  database:
+    image: 'mongo'
+    container_name: 'container'
+    environment:
+      - MONGO_INITDB_DATABASE=CarShareDb
+      - MONGO_INITDB_ROOT_USERNAME=username
+      - MONGO_INITDB_ROOT_PASSWORD=brkCarShareSecretKey
+    ports:
+      - '27017'
+      - '8989'
